@@ -1,0 +1,48 @@
+main.container {
+height: 800px;
+
+}
+
+section.new-tweet {
+ border-radius: 5px;
+ border: 1px solid #C0C0C0;
+ background-color: #eee;
+ padding: 20px;
+ padding-top: 0px;
+ width: 350px;
+ margin-left: 48px;
+ margin-right: 48px;
+ vertical-align: middle;
+
+
+}
+
+#counter {
+  float: right;
+}
+
+input, .counter {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+}
+
+
+hr {
+height:0;
+border:0;
+border-top:1px solid #000000;
+margin-top:-1.2em;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+}
