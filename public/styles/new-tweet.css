@@ -1,5 +1,6 @@
 main.container {
 height: 800px;
+width: 800px;
 
 }
 
@@ -9,7 +10,7 @@ section.new-tweet {
  background-color: #eee;
  padding: 20px;
  padding-top: 0px;
- width: 350px;
+ width: 700px;
  margin-left: 48px;
  margin-right: 48px;
  vertical-align: middle;
