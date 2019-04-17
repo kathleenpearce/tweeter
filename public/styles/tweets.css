@@ -73,13 +73,13 @@ article footer.article-footer {
 }
 
 article.tweet footer .icons{
- visibility: hidden;
- padding: 10px 0px;
+  visibility: hidden;
+  padding: 10px 0px;
 }
 
 .tweet:hover .icons {
- visibility: visible;
- margin-bottom: 20px;
+  visibility: visible;
+  margin-bottom: 20px;
 }
 
 .icons i {

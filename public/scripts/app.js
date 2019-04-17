@@ -35,7 +35,7 @@ function createTweetElement(tweetData){
 
 
 
-console.log($tweet[0].innerHTML);
+// console.log($tweet[0].innerHTML);
  return $tweet;
 }
 
@@ -99,6 +99,19 @@ function renderTweets(tweets) {
 
 
 $(document).ready(function(){
-renderTweets(data)
+// renderTweets(data)
 
+  function loadTweets() {
+    $.ajax('tweets/', { method: 'GET' })
+      .then(function(res) {
+      // console.log('Success', res);
+      renderTweets(res);
 });
+    }
+    loadTweets();
+  });
+
+
+
+
+
