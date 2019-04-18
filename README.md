@@ -1,9 +1,9 @@
-# **Tweeter Project**
+# ** 🐦 Tweeter Project 🐦 **
 
 _Tweeter is a simple, single-page Twitter clone using HTML, CSS, JS, jQuery and AJAX in the front end side of things and focusing on Node, Express and MongoDB in the back-end._
 
 ## Final Product
-_*Here are two examples of what "Tweeter" looks like to the user!*_
+_*Here are two examples of what "Tweeter" looks like to the user when they want to share their thoughts with other users*_
 
 ## _Users can write their own tweet!_
 ![Alt text](https://github.com/kathleenpearce/tweeter/blob/master/README%20images/compose%20a%20tweet!.png)
