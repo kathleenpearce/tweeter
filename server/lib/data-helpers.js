@@ -16,18 +16,16 @@ module.exports = function makeDataHelpers(db) {
         callback(null, true)
       })
     },
-     getTweets(callback) {
+    getTweets(callback) {
       db.collection("tweets").find().toArray((err, tweets) => {
-          if (err) {
-            return callback(err);
-          }
-          callback(null, tweets);
-
-      })
-    }
-
-}
-}
+        if (err) {
+          return callback(err);
+        }
+        callback(null, tweets);
+      });
+    };
+  };
+};
 
 
 

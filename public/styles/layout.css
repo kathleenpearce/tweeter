@@ -1,8 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
@@ -13,7 +8,7 @@ html {
 
 
 /*
- * Global layout stuff
+ * Global layout
  */
 
 body {
@@ -26,8 +21,6 @@ body {
   z-index: 1000000;
 }
 
-
-
 main {
   padding-top: 140px;
   width: 450px;
@@ -35,7 +28,3 @@ main {
   background-color: #ffffff;
 }
 
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

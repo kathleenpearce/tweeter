@@ -12,19 +12,19 @@ $(document).ready(function() {
   };
 });
 
-
- function countCharacters(event) {
-    let input = document.getElementById('tweet').value;
-    let counter = (140 - (input.length));
-      countRemaining = document.getElementById('counter');
-        if (counter >= 0){
-      countRemaining.textContent = counter;
-      $("#empty-tweet").slideUp("slow", function(){
+// counts the number of characters being inputted into textarea and displays error messages + count font red when 140 characters exceeded
+function countCharacters(event) {
+  let input = document.getElementById('tweet').value;
+  let counter = (140 - (input.length));
+    countRemaining = document.getElementById('counter');
+      if (counter >= 0){
+        countRemaining.textContent = counter;
+        $("#empty-tweet").slideUp("slow", function(){
       });
-       $("#long-tweet").slideUp("slow", function(){
+        $("#long-tweet").slideUp("slow", function(){
       });
-       countRemaining.style.color = '#244751';
-    } else {
+        countRemaining.style.color = '#244751';
+      } else {
         countRemaining.textContent = counter;
         countRemaining.style.color = "red"
         $("#long-tweet").slideDown("slow", function(){

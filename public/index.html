@@ -24,14 +24,14 @@
 
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar  -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
       <input type=submit value="Compose" id="compose-button">
     </nav>
 
-    <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content  -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -40,55 +40,33 @@
         <textarea name="text" id="tweet" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet" id="button">
         <span id="counter">140</span>
-        <p>
+      <p>
         <label for="empty-tweet" id="empty-tweet">
         <span class="error"><i> Error! No tweet - please insert some text to compose a tweet!</i></span>
       </p>
-      </label>
+        </label>
       <p>
         <label for="long-tweet" id="long-tweet">
         <span class="error"><i>Error! Tweet exceeds 140 characters.</i></span>
       </p>
-      </label>
+        </label>
         </form>
       </section>
 
-
-      <section id="tweets-container">
-      <!-- <article class="tweet">
-
-          <header class="article-header">
-          <img class='image' src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/198/cat-face_1f431.png">
-          <h2 class="name"> Bill Fields </h2>
-          <span class="handler"> @MrFields </span></header>
-          <div class="tweet-here"> Little Tweet Here </div>
-
-          <footer class="article-footer">
-          <p class="timestamp">10 days ago </p>
-          <p class="icon"><i class="far fa-flag"></i><i class="fas fa-retweet"></i><i class="far fa-heart"></i></p>
-          </footer>
-
-        </article> -->
-      </section>
-
-        <!-- <header class="article-header">
-        <img class="image" src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png">
-        <h3 class="name">Johann von Goethe</h3>
-        <address class="handler">@johann49</address>
-      </header>
-      <p class="twee --><!-- t-here">Es ist nichts schrecklicher als eine tätige Unwissenheit.</p> -->
+      <section id="tweets-container"></section>
 
     </main>
 
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script>
-     $(document).ready(function(){
-       $('#compose-button').on('click', function () {
-          $('.new-tweet').slideToggle('fast',(function() {
-           $('#tweet').select();
-       }));
-       });
-     });
-   </script>
-  </body>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#compose-button').on('click', function () {
+        $('.new-tweet').slideToggle('fast',(function() {
+        $('#tweet').select();
+      }));
+    });
+  });
+    </script>
+    </body>
 </html>

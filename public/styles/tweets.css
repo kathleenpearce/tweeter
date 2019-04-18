@@ -1,30 +1,31 @@
+/*css styling for tweets*/
+
 .tweet {
   opacity: 0.7;
   border-radius: 5px;
- border: 1px solid #C0C0C0;
- width: 700px;
- margin-left: 48px;
- margin-right: 48px;
- margin-top: 15px;
- vertical-align: middle;
+  border: 1px solid #C0C0C0;
+  width: 700px;
+  margin-left: 48px;
+  margin-right: 48px;
+  margin-top: 15px;
+  vertical-align: middle;
 }
 
 article header {
- display: flex;
- border-radius: 5px;
- border: 0.5px;
- background-color: #ededed;
- width: 698px;
- padding-right: 20px;
- margin-right: 0px;
- margin-top: 0px;
-
+  display: flex;
+  border-radius: 5px;
+  border: 0.5px;
+  background-color: #ededed;
+  width: 698px;
+  padding-right: 20px;
+  margin-right: 0px;
+  margin-top: 0px;
 }
 
 .article-header .image {
-width: 60px;
-height: 60px;
-margin: 10px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
 }
 
 .article-header h2 {

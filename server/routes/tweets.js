@@ -1,12 +1,10 @@
 "use strict";
 
 const userHelper    = require("../lib/util/user-helper")
-
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
-
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -23,14 +21,14 @@ module.exports = function(DataHelpers) {
       return;
     }
 
-    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
-    const tweet = {
-      user: user,
-      content: {
-        text: req.body.text
-      },
-      created_at: Date.now()
-    };
+const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+const tweet = {
+  user: user,
+    content: {
+    text: req.body.text
+  },
+    created_at: Date.now()
+  };
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {

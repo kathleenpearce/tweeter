@@ -1,21 +1,22 @@
-#nav-bar {
-position: fixed;
-height: 80px;
-width: 100%;
-background-color: #00a087;
-color: #e8fdff;
-margin-right: 2em;
-margin-left: 2em:
-float: left;
-padding: 0 2em;
+/*css styling for navigation bar*/
 
+#nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  margin-right: 2em;
+  margin-left: 2em:
+  float: left;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 #nav-bar .logo {
-height: 80px;
-width: 80px;
-float: left;
-
+  height: 80px;
+  width: 80px;
+  float: left;
 }
 
 #nav-bar .header {
@@ -41,7 +42,6 @@ float: left;
 #compose-button:hover {
   background-color: white;
   color: black;
-
 }
 
 
