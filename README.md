@@ -1,4 +1,4 @@
-# ** 🐦 Tweeter Project 🐦 **
+# **🐦 Tweeter Project 🐦**
 
 _Tweeter is a simple, single-page Twitter clone using HTML, CSS, JS, jQuery and AJAX in the front end side of things and focusing on Node, Express and MongoDB in the back-end._
 
