@@ -19,30 +19,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-        $(function() { //document ready function
-
-
-
-        $('form').on('submit', function(event) {
-          event.preventDefault();
-          console.log('heard submit event');
-          let data = $(this).serialize();
-          console.log('data', data);
-
-        $.ajax({
-          url: '/tweets',
-          method: 'POST',
-          data: data
-       }).then(
-         (res) => { console.log('success!', res) }, // success (200-300)
-         (err) => { console.log('noooooo') } // 400-500
-       )
-     });
-   });
-</script>
-
-
 
   </head>
 
@@ -59,9 +35,9 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <hr></hr>
-        <form method="POST" action="/tweets">
+        <form method="POST" action="/tweets" id="form">
         <textarea name="text" id="tweet" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
+        <input type="submit" value="Tweet" id="button">
         <span id="counter">140</span>
         </form>
       </section>

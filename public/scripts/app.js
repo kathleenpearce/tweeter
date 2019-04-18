@@ -24,18 +24,6 @@ function createTweetElement(tweetData){
  $icons.appendTo($footer);
  $footer.appendTo($tweet);
 
- // let $footer =$("<i>").addClass("far fa-flag").appendTo($footer);
- // let $footer =$("<i>").addClass("far fa-heart").appendTo($footer);
- // let $footer =$("<i>").addClass("fas fa-retweet").appendTo($footer);
- // $footer.appendTo($tweet);
- // let footer = $("<p>").addClass("article-footer").text(tweetData.created_at).appendTo($tweet);
- // let footer =$("<i>").addClass("far fa-flag").appendTo($footer);
- // let footer =$("<i>").addClass("fas fa-retweet").appendTo($footer);
- // let footer =$("<i>").addClass("far fa-heart").appendTo($footer);
-
-
-
-// console.log($tweet[0].innerHTML);
  return $tweet;
 }
 
@@ -91,25 +79,46 @@ function createTweetElement(tweetData){
 
 
 
-function renderTweets(tweets) {
-  tweets.forEach(element => {
-    $('#tweets-container').append(createTweetElement(element));
-  }
-)};
-
+//Start the page load event here
 
 $(document).ready(function(){
-// renderTweets(data)
 
-  function loadTweets() {
-    $.ajax('tweets/', { method: 'GET' })
-      .then(function(res) {
-      // console.log('Success', res);
-      renderTweets(res);
-});
-    }
-    loadTweets();
+  loadTweets();
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    let data = $(this).serialize();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: data,
+      success: function(result){
+        console.log("tweet was posted ",result);
+        loadTweets();
+        let form = document.getElementById('form');
+        form.reset();
+      },
+      error: function(err){
+        console.log("there was an error ",err);
+      }
+    })
+
   });
+
+
+  function loadTweets(){
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function(res){
+        renderTweets(res);
+      });
+  }
+
+  function renderTweets(tweets) {
+    tweets.forEach(element => {
+      $('#tweets-container').prepend(createTweetElement(element));
+    }
+  )};
+
+});
 
 
 
