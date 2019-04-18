@@ -46,3 +46,11 @@ hr {
   margin-right: auto;
 
 }
+
+#empty-tweet {
+  display:none;
+}
+
+#long-tweet {
+  display:none;
+}
