@@ -2,6 +2,7 @@ $(document).ready(function() {
   let elem = document.getElementById('tweet');
   let button = document.getElementById('button');
   elem.addEventListener('keyup', countCharacters, false);
+  button.addEventListener('click', countCharacters);
 
   button.addEventListener('click', function(){
     let value = document.getElementById('tweet').value;
@@ -25,6 +26,8 @@ function countCharacters(event) {
       });
         countRemaining.style.color = '#244751';
       } else {
+        event.preventDefault();
+        event.stopPropagation();
         countRemaining.textContent = counter;
         countRemaining.style.color = "red"
         $("#long-tweet").slideDown("slow", function(){

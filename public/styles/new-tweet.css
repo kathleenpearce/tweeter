@@ -21,6 +21,11 @@ section.new-tweet {
   float: right;
 }
 
+.tweet-here {
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
 input, .counter {
   display: inline-flex;
   justify-content: space-between;
